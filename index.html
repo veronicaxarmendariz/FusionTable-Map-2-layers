@@ -2,7 +2,7 @@
 <html lang='en'>
   <head>
     <!--MODIFY title that appears in web browser tab -->
-    <title>Search-and-Filter Map Template</title>
+    <title>Park River Watershed Project Map</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content='' name='description' />
@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
           </button>
           <!--MODIFY title of web page, and link destination if desired-->
-          <a class='navbar-brand' href='index.html'>Search-and-Filter Map Template with 2 layers</a>
+          <a class='navbar-brand' href='index.html'>Park River Watershed Project Map</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -62,28 +62,49 @@
             
             <!--MODIFY Point layer legend heading, labels (such as Interdistrict), and colors (green, blue, yellow, red, purple) to match your data -->
             <h4>
-              Point layer
+              School Ecotypes
             </h4>
             <ul class='inputs-list unstyled'>
               <li>
                 <label class='checkbox inline'>
                   <input type='checkbox' id='cbType1' />
-                  <span class='filter-box filter-green'></span>
-                  Interdistrict schools  <!--This label can be modified from actual data entry ("Interdistrict") -->
+                  <img src= 'images/blue-dot.png'>
+                  Watershed/Wetland Adjacency Schools  <!--This label can be modified from actual data entry ("Interdistrict") -->
                 </label>
               </li>
               <li>
                 <label class='checkbox inline'>
                   <input type='checkbox' id='cbType2' />
-                  <span class='filter-box filter-blue'></span>
-                  District schools
+                  <img src= 'images/purple-dot.png'>
+                  Environmental Goals Schools
                 </label>
               </li>
               <li>
                 <label class='checkbox inline'>
                   <input type='checkbox' id='cbType3' />
+                  <img src= 'images/green-dot.png'>
+                  Nature Trail/Park/Open Space Adjacency Schools
+                </label>
+              </li>
+              <li>
+                <label class='checkbox inline'>
+                  <input type='checkbox' id='cbType4' />
+                  <img src= 'images/yellow-dot.png'>
+                  Science Goals Schools
+                </label>
+              </li>
+              <li>
+                <label class='checkbox inline'>
+                  <input type='checkbox' id='cbType5' />
+                  <img src= 'images/red-dot.png'>
+                  STEM Schools
+                </label>
+              </li>
+              <li>
+                <label class='checkbox inline'>
+                  <input type='checkbox' id='cbType6' />
                   <span class='filter-box filter-yellow'></span>
-                  More PreK centers
+                  Other Schools
                 </label>
               </li>
             </ul>
@@ -92,16 +113,22 @@
               <!--Polygon layers-->
             </h4>
             <ul class='inputs-list unstyled'>
-              <li>
+            <li>
                 <label class='radio inline'>
-                  <input type='radio' name='types' id='rbPolygon1' checked />
-                  Polygon layer 1
+                  <input type='radio' name='types' id='rbPolygon1' />
+                  Boundaries
                 </label>
               </li>
               <li>
                 <label class='radio inline'>
-                  <input type='radio' name='types' id='rbPolygon2' />
-                  Polygon layer 2
+                  <input type='radio' name='types' id='rbPolygon2' checked />
+                  The Park River Watershed Region Layer
+                </label>
+              </li>
+              <li>
+                <label class='radio inline'>
+                  <input type='radio' name='types' id='rbPolygon3' />
+                  The Park River Watershed
                 </label>
               </li>
               <li>
