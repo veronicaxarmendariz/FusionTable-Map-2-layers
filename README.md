@@ -1,7 +1,7 @@
 FusionTable-Map-2-layers
 ========================
 
-Live demo at http://jackdougherty.github.io/FusionTable-Map-2-layers
+Live demo at http://veronicaxarmendariz.github.io/FusionTable-Map-2-layers
 
 Use this template if you wish to create a Search-and-Filter map that turns on/off at least 2 layers (points and polygons), and draws data from Google Fusion Tables. The default point map displays a textual legend (A, B, C), with option to switch to numeric (0-100) values. Based on template customized by Derek Eder http://derekeder.com/searchable_map_template/
 
