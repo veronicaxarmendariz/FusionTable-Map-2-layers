@@ -31,6 +31,7 @@ var MapsLib = {
   polygon1TableID:    "1ceippR4giBiF-pT9PE1YAUvebFp6_NKvYriccYo", //Outline map layer of CT town boundaries
   polygon2TableID:    "1VopQGBhRKyyk25EIA5ptScvULxR68d43RhZ1ycM", //Thematic map layer of selected CT school districts
   polygon3TableID:    "1rzHauoWeSZLWCaYdIBdi9nP4PIPJ96WunLeyNkXe",
+  
   //*MODIFY Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
   googleApiKey:       "AIzaSyDIevSvpV-ONb4Pf15VUtwyr_zZa7ccwq4",
@@ -151,9 +152,12 @@ MapsLib.polygon3 = new google.maps.FusionTablesLayer({
     //-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
     var type_column = "'Ecotype of Schools'";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
-    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Interdistrict");
-    if ( $("#cbType2").is(':checked')) tempWhereClause.push("District");
-    if ( $("#cbType3").is(':checked')) tempWhereClause.push("MorePreK");
+    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Watershed/Wetland Adjacency Schools");
+    if ( $("#cbType2").is(':checked')) tempWhereClause.push("Evnvironmental Goals Schools");
+    if ( $("#cbType3").is(':checked')) tempWhereClause.push("Nature Trail/Park/Open Space Adjacency Schools");
+    if ( $("#cbType4").is(':checked')) tempWhereClause.push("Science Goals Schools");
+    if ( $("#cbType5").is(':checked')) tempWhereClause.push("STEM Schools");
+    if ( $("#cbType6").is(':checked')) tempWhereClause.push("Other Schools");
     whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
 
     //-- NUMERICAL OPTION - to display and filter a column of numerical data in your table, use this instead
