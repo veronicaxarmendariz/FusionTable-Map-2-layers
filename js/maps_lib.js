@@ -101,7 +101,7 @@ var MapsLib = {
       templateId: 2
     });
 
-MapsLib.polygon3 = new google.maps.FusionTablesLayer({
+    MapsLib.polygon3 = new google.maps.FusionTablesLayer({
       query: {
         from:   MapsLib.polygon3TableID,
         select: "geometry"
@@ -233,6 +233,8 @@ MapsLib.polygon3 = new google.maps.FusionTablesLayer({
       MapsLib.polygon1.setMap(null);
     if (MapsLib.polygon2 != null)
       MapsLib.polygon2.setMap(null);
+      if (MapsLib.polygon3 != null)
+      MapsLib.polygon3.setMap(null);
     if (MapsLib.addrMarker != null)
       MapsLib.addrMarker.setMap(null);
     if (MapsLib.searchRadiusCircle != null)
