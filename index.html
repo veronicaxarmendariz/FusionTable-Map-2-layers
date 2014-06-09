@@ -30,7 +30,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <!--MODIFY link and text to point to your own site if desired-->
-            <li class='active'><a href="http://epress.trincoll.edu/dataviz" target="_blank">Learn more from free DataViz book at Trinity College CT</a></li>
+            <li class='active'><a href="http://www.parkwatershed.org">Park River Watershed home page</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -59,7 +59,7 @@
                 </select>
               </label>
             </p>
-            
+
             <!--MODIFY Point layer legend heading, labels (such as Interdistrict), and colors (green, blue, yellow, red, purple) to match your data -->
             <h4>
               School Ecotypes
@@ -175,10 +175,10 @@
         $(window).resize(function () {
           var h = $(window).height(),
             offsetTop = 105; // Calculate the top offset
-        
+
           $('#map_canvas').css('height', (h - offsetTop));
         }).resize();
-        
+
         $(function() {
           MapsLib.initialize();
           $("#search_address").geocomplete();
@@ -190,26 +190,26 @@
           $(':radio').click(function(){
             MapsLib.doSearch();
           });
-          
+
           $('#search_radius').change(function(){
             MapsLib.doSearch();
           });
-          
+
           $('#search').click(function(){
             MapsLib.doSearch();
           });
-          
+
           $('#find_me').click(function(){
-            MapsLib.findMe(); 
+            MapsLib.findMe();
             return false;
           });
-          
+
           $('#reset').click(function(){
             $.address.parameter('address','');
-            MapsLib.initialize(); 
+            MapsLib.initialize();
             return false;
           });
-          
+
           $(":text").keydown(function(e){
               var key =  e.keyCode ? e.keyCode : e.which;
               if(key == 13) {
