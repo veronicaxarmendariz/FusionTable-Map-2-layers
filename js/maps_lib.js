@@ -138,8 +138,8 @@ MapsLib.polygon3 = new google.maps.FusionTablesLayer({
     else if ($("#rbPolygon2").is(':checked')) {
       MapsLib.polygon2.setMap(map);
     }
-    else if ($("#rbPolygon2").is(':checked')) {
-      MapsLib.polygon2.setMap(map);
+    else if ($("#rbPolygon3").is(':checked')) {
+      MapsLib.polygon3.setMap(map);
     }
     
     var address = $("#search_address").val();
