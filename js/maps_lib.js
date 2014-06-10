@@ -26,9 +26,9 @@ var MapsLib = {
 
   //MODIFY the encrypted Table IDs of your Fusion Tables (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId:      "1rzHauoWeSZLWCaYdIBdi9nP4PIPJ96WunLeyNkXe", //Point data layer
+  fusionTableId:      "1p9cPHQf0bYWLZXG9NkCyl1pQUwGq72vWcpk9hhrx", //Point data layer
   
-  polygon1TableID:    "1ceippR4giBiF-pT9PE1YAUvebFp6_NKvYriccYo", //Outline map layer of CT town boundaries
+  polygon1TableID:    "1p9cPHQf0bYWLZXG9NkCyl1pQUwGq72vWcpk9hhrx", //Outline map layer of CT town boundaries
   polygon2TableID:    "1Z1VyJ9tME-Xqxk7tW1l8Sn813k1CABKTjd7S4IE", //Thematic map layer of selected CT school districts
   polygon3TableID:    "1rzHauoWeSZLWCaYdIBdi9nP4PIPJ96WunLeyNkXe",
   
@@ -63,8 +63,8 @@ var MapsLib = {
       styles: [
         {
           stylers: [
-            { saturation: -100 }, // MODIFY Saturation and Lightness if needed
-            { lightness: 40 }     // Current values make thematic polygon shading stand out over base map
+            { saturation: 0 }, // MODIFY Saturation and Lightness if needed
+            { lightness: 0 }     // Current values make thematic polygon shading stand out over base map
           ]
         }
       ]
@@ -150,7 +150,7 @@ var MapsLib = {
   //-----custom filters for point data layer
     //---MODIFY column header and values below to match your Google Fusion Table AND index.html
     //-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
-    var type_column = "'Ecotype of Schools'";  // -- note use of single & double quotes for two-word column header
+    /*var type_column = "'School Ecotype'";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
     if ( $("#cbType1").is(':checked')) tempWhereClause.push("Watershed/Wetland Adjacency Schools");
     if ( $("#cbType2").is(':checked')) tempWhereClause.push("Evnvironmental Goals Schools");
@@ -158,17 +158,18 @@ var MapsLib = {
     if ( $("#cbType4").is(':checked')) tempWhereClause.push("Science Goals Schools");
     if ( $("#cbType5").is(':checked')) tempWhereClause.push("STEM Schools");
     if ( $("#cbType6").is(':checked')) tempWhereClause.push("Other Schools");
-    whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
+    whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";*/
 
     //-- NUMERICAL OPTION - to display and filter a column of numerical data in your table, use this instead
-    /*    var type_column = "'TypeNum'";
+       var type_column = "'Ecotype Number'";
     var searchType = type_column + " IN (-1,";
-    if ( $("#cbType1").is(':checked')) searchType += "1,";
-    if ( $("#cbType2").is(':checked')) searchType += "2,";
-    if ( $("#cbType3").is(':checked')) searchType += "3,";
-    if ( $("#cbType4").is(':checked')) searchType += "4,";
+    if ( $("#cbType1").is(':checked')) searchType += "2,";
+    if ( $("#cbType2").is(':checked')) searchType += "4,";
+    if ( $("#cbType3").is(':checked')) searchType += "1,";
+    if ( $("#cbType4").is(':checked')) searchType += "3,";
     if ( $("#cbType5").is(':checked')) searchType += "5,";
-    whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";*/
+    if ( $("#cbType6").is(':checked')) searchType += "6,";
+    whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
     if (address != "") {
